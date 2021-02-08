@@ -17,6 +17,7 @@ class Animal {
     this.height = height
     this.species = species
     this.weight = weight
+    this.imgSrc = `./images/${species}.png`
   }
 }
 
@@ -24,9 +25,19 @@ class Animal {
 class Dino extends Animal {
   constructor({diet, fact, height, species, weight, when, where}) {
     super(diet, height, species, weight)
-    this.fact = fact
+    this.fact = Dino.generateFact(species, fact, where, when)
     this.when = when
     this.where = where
+  }
+
+  static generateFact(species, fact, where, when) {
+    return species === 'Pigeon'
+      ? [fact]
+      : [
+          fact,
+          `${species} could be found in ${where}`,
+          `${species} used tto exist from ${when}`,
+        ]
   }
 }
 
