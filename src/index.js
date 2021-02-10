@@ -155,7 +155,8 @@ const makeGrid = () => {
   const grid = document.createElement('div')
   grid.id = 'grid'
   gridContainer.appendChild(grid)
-
+  //randomise dinos arr
+  dinos.sort(() => Math.random() - 0.5)
   // add human Obj to arr
   dinos.splice(4, 0, human)
   // Add tiles to DOM
