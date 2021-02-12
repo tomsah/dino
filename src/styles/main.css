@@ -138,6 +138,23 @@ input {
     border: 0;
 }
 
+input:valid {
+    border: 2px solid green;
+}
+
+input:invalid{
+    border: 2px dashed rgba(255,0,0,0.3);
+}
+
+input::placeholder {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
 .form-field__short {
     width: 25%;
     margin-right: 3%;
@@ -161,7 +178,7 @@ select {
     transition: ease 0.3s all;
 }
 
-#btn:hover {
+#btn:hover:enabled {
     background: #777;
     color: #fff;
     cursor: pointer;

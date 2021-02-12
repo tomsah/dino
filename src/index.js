@@ -6,8 +6,16 @@ let human = {}
 let gridContainer
 //form
 const button = document.getElementById('btn')
+//Set disabled via JS in case user does not have JS enabled
+button.setAttribute('disabled', 'disabled')
+
 const form = document.getElementById('dino-compare')
 const main = document.getElementById('main')
+
+// Validate Form
+form.addEventListener('change', () => {
+  button.disabled = !form.checkValidity()
+})
 
 //Remove an element and its parent from the DOM
 const removeElm = (elm) => {
