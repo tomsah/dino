@@ -7,6 +7,10 @@ yarn-error.log*
 /.changelog
 # Dependency directories
 node_modules/
+# Distribution directories
+dist/
+# Build directory
+build/
 # Optional npm cache directory
 .npm/
 # dotenv environment variables file
