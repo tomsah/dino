@@ -10,9 +10,9 @@
     "url": "https://github.com/tomsah/dino"
   },
   "scripts": {
-    "build": "npm run webpack --mode=production",
+    "build": "npm run webpack -- --mode production",
     "check-format": "npm run prettier -- --list-different",
-    "dev": "npm run webpack-dev-server  --  --hot --open --mode=development",
+    "dev": "npm run webpack-dev-server  --  --hot --open --mode development",
     "format": "npm run prettier -- --write",
     "lint": "eslint --ignore-path .gitignore .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js |json)\" ",
