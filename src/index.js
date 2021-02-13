@@ -13,7 +13,7 @@ const form = document.getElementById('dino-compare')
 const main = document.getElementById('main')
 
 // Validate Form
-form.addEventListener('change', () => {
+form.addEventListener('input', () => {
   button.disabled = !form.checkValidity()
 })
 
