@@ -41,6 +41,7 @@ class Dino extends Animal {
     this.fact = Dino.generateFact(species, fact, where, when)
     this.when = when
     this.where = where
+    this.id = 'Dino'
   }
 
   static generateFact(species, fact, where, when) {
@@ -53,9 +54,10 @@ class Dino extends Animal {
         ]
   }
 }
-
 //create Dino
-data.Dinos.forEach((elm) => dinos.push(new Dino(elm)))
+data.Dinos.forEach((elm) => {
+  dinos.push(new Dino(elm))
+})
 
 //human
 class Human extends Animal {
@@ -170,7 +172,7 @@ const makeGrid = () => {
   // Add tiles to DOM
   dinos.forEach((item) => {
     const tiles =
-      item.constructor.name === 'Dino'
+      item.id === 'Dino'
         ? createTiles(item.species, item.imgSrc, item.fact)
         : createTiles(item.name, item.imgSrc)
     grid.appendChild(tiles)
