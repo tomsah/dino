@@ -1,7 +1,9 @@
 # Object Oriented Javascript 
 
-## Student Instructions
+## To visit the final project follow the link below
+Link to Project => [dino-project](https://friendly-hamilton-0cf7dc.netlify.app/)
 
+## Student Instructions
 ### Big Picture
 
 You will be building an infographic that is derived from data that is provided, as well as user input data. Object-oriented javascript is great for working with complex data, but it’s not of much use without an interface to interact with. You will be pulling in information from a form and using it to complete an array of objects that will then be appended back to the DOM. 
@@ -25,4 +27,60 @@ To complete this project, your backend code must:
 - [ ] Contain at least 3 methods for comparing dinosaurs to the human
 - [ ] Get user data from the DOM
 - [ ] Append tiles with object data to DOM
+
+### Project structure
+#### Prerequisites
+* [Git](https://git-scm.com/downloads)
+* [npm](https://www.npmjs.com/get-npm)
+* [Node.js](https://nodejs.org/en/) >= 6.x
+* [http-server](https://www.npmjs.com/package/http-server)
+
+#### run the app in development mode locally
+1. In Terminal, clone the git project using `$ git clone https://github.com/tomsah/dino`.
+2. Navigate to the root directory for the project.
+3. Run the command `npm install` to install the necessary dependencies
+3. Run the command `npm run dev` to start the server. This will automatically open the website in your browser.
+
+#### create & run a production build locally
+1.  Run the command `npm install` to install the necessary dependencies   
+2.   Run the command `npm run build`  
+       
+
+    the following steps are only if you are using `http-server` with its default parameter,    
+    If you are using any different way to run the build, refer to the doc of you tools of choice,   
+
+3.   Navigate to the dist folder and run `http-server`   
+4.   visit `localhost:8080`   
+
+## Folder Structure
+
+After creation, your project should look like this:
+
+```
+dino/
+  dist/
+    index.html
+    data/
+      dino.json
+    images/
+    bundle.js
+  src/
+   data/
+     dino.json
+   images/
+   styles/
+   index.js
+     README.md
+  node_modules/
+  package.json
+  .eslintigniore
+  .eslintrc
+  .gitignore
+  .huskyrc
+  .lintstagedrc
+  .prettierrc
+  .travis.yml
+  babel.config.js
+  webpack.config.js
+```
 
